@@ -58,6 +58,10 @@ export class NotionService {
     return this.notion.users;
   }
 
+  public get comments() {
+    return this.notion.comments;
+  }
+
   protected createLoggerBridge(logger: NestjsLogger): NotionLogger {
     return (
       level: LogLevel,
