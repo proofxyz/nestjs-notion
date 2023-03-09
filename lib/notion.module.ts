@@ -19,6 +19,7 @@ import { mergeDefaults } from './utils';
 export class NotionModule {
   static forRoot(options: NotionModuleOptions = {}): DynamicModule {
     return {
+      global: true,
       module: NotionModule,
       providers: [
         {
@@ -31,6 +32,7 @@ export class NotionModule {
 
   static forRootAsync(options: NotionModuleAsyncOptions): DynamicModule {
     return {
+      global: true,
       module: NotionModule,
       imports: options.imports,
       providers: [

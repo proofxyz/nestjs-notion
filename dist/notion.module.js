@@ -11,6 +11,7 @@ const utils_1 = require("./utils");
 let NotionModule = NotionModule_1 = class NotionModule {
     static forRoot(options = {}) {
         return {
+            global: true,
             module: NotionModule_1,
             providers: [
                 {
@@ -22,6 +23,7 @@ let NotionModule = NotionModule_1 = class NotionModule {
     }
     static forRootAsync(options) {
         return {
+            global: true,
             module: NotionModule_1,
             imports: options.imports,
             providers: [
